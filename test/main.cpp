@@ -1,4 +1,4 @@
-#include <QtGui/QApplication>
+#include <QApplication>
 #include "dateedittest.h"
 
 int main(int argc, char *argv[])

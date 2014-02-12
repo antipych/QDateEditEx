@@ -1,7 +1,9 @@
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
 TEMPLATE = lib
 TARGET = qdateeditex
 
-CONFIG += STATIC
+CONFIG += staticlib
 DEFINES += WIDGETS_LIBRARY
 
 INCLUDEPATH += .
@@ -10,7 +12,6 @@ DEPENDPATH += .
 DESTDIR = ../lib
 
 HEADERS = \
-        qtableviewex.h \
         widgets_export.h \
         qdateeditex.h
 

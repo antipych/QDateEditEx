@@ -206,7 +206,7 @@ void QDateEditEx::resizeEvent(QResizeEvent *event)
 void QDateEditEx::paintEvent(QPaintEvent *event)
 {
     if (d->nullable && d->null) {
-        QLineEdit *edit = qFindChild<QLineEdit *>(this, "qt_spinbox_lineedit");
+        QLineEdit *edit = this->findChild<QLineEdit *>("qt_spinbox_lineedit");
         edit->setText("");
 
         d->clearButton->setVisible(false);
@@ -232,7 +232,7 @@ void QDateEditEx::keyPressEvent(QKeyEvent *event)
         return;
     }
     if (event->key() == Qt::Key_Backspace && d->nullable){
-        QLineEdit *edit = qFindChild<QLineEdit *>(this, "qt_spinbox_lineedit");
+        QLineEdit *edit = this->findChild<QLineEdit *>("qt_spinbox_lineedit");
         if (edit->selectedText() == edit->text()) {
             setDateTime(QDateTime());
             event->accept();
