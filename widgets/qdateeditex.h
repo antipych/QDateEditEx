@@ -31,6 +31,7 @@ class WIDGETS_EXPORT QDateEditEx : public QDateEdit
     Q_OBJECT
 
     Q_PROPERTY(bool nullable READ isNullable WRITE setNullable)
+    Q_PROPERTY(QDate date READ date WRITE setDate)
 public:
     explicit QDateEditEx(QWidget *parent = 0);
 
